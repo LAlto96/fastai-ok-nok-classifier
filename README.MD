@@ -26,39 +26,33 @@ Tu peux remplacer directement ton bloc actuel par celui-ci :
 
 ```
 .
-├── clothing-dataset-small-master/ # Dataset externe (non utilisé dans le training final)
+├── clothing-dataset-small-master/ # Dataset externe complet (non utilisé dans le pipeline final)
 │ ├── test/
 │ ├── train/
 │ └── validation/
 │
-├── dataset/ # Dataset prêt à l'emploi (splits générés)
+├── dataset/ # Dataset final (généré par le script)
 │ ├── test/
 │ ├── train/
 │ └── val/
 │
-├── deepfashion/ # Extraction partielle du dataset DeepFashion
-│ ├── annos/ # Annotations brutes
-│ └── image/ # Images récupérées
+├── deepfashion/ # Données brutes extraites depuis DeepFashion
+│ ├── annos/ # Annotations JSON/texte
+│ └── image/ # Images extraites
 │
-├── nok/ # Images NOK (input brut utilisateur)
-├── ok/ # Images OK (input brut utilisateur)
-│
-├── models/
-│ ├── ok_nok_resnet18_fastai.pkl # Modèle entraîné (export fastai)
-│ └── ok_nok_threshold.json # Seuil optimal déterminé pendant l'évaluation
-│
-├── notebooks/
-│ ├── notebook.ipynb # Notebook principal d’entraînement
-│ └── test_model.ipynb # Notebook de test/inférence
-│
-├── inference/
-│ └── predict_image.py # Script d’inférence standalone
+├── nok/ # Images NOK collectées manuellement
+├── ok/ # Images OK collectées manuellement
 │
 ├── .gitattributes
 ├── .gitignore
 ├── LICENSE # Licence MIT (Ludovic Lafon)
-└── README.md
-
+├── nbdime_config.json # Configuration nbdime pour diff Jupyter
+│
+├── notebook.ipynb # Notebook principal d’entraînement fastai
+├── test_model.ipynb # Notebook de test (inférence & batch prediction)
+│
+├── ok_nok_resnet18_fastai.pkl # Modèle exporté (fastai)
+└── ok_nok_threshold.json # Seuil optimal calculé
 ```
 
 ---
