@@ -1,0 +1,33 @@
+# === DATASETS (gros fichiers à ne pas versionner) ===
+clothing-dataset-small-master/
+dataset/
+deepfashion/
+nok/
+ok/
+
+# === JUPYTER ===
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# On NE met PAS *.ipynb ici, pour garder les notebooks.
+
+# === PYTHON CACHE ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# === FASTAI / TORCH / CACHES GLOBAUX ===
+.cache/
+cache/
+models/
+runs/
+
+# === EDITOR / SYSTEM ===
+*.swp
+*.swo
+*.DS_Store
+
+# === LOGS / TEMP ===
+*.log
+*.tmp
