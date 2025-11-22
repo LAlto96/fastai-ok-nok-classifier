@@ -1,0 +1,29 @@
+{
+  "NbDiff": {
+    "source": true,
+    "outputs": false,
+    "metadata": false,
+    "details": false
+  },
+
+  "GitDiff": {
+    "source": true,
+    "outputs": false,
+    "metadata": false,
+    "details": false
+  },
+
+  "NbDiffDriver": {
+    "source": true,
+    "outputs": false,
+    "metadata": false,
+    "details": false
+  },
+
+  "NbMergeDriver": {
+    "source": true,
+    "outputs": false,
+    "metadata": false,
+    "details": false
+  }
+}
