@@ -18,24 +18,48 @@ Il inclut l’ensemble de la pipeline machine learning :
 
 ---
 
-## 📂 Structure du projet
+Voici une version corrigée et cohérente de la **Structure du projet** pour ton `README.md`, en tenant compte de ce qui apparaît réellement dans ta repo (screenshots + arborescence GitHub).
+
+Tu peux remplacer directement ton bloc actuel par celui-ci :
+
+## 📁 Structure du projet
 
 ```
-
 .
-├── notebooks/
-│   └── training.ipynb             # Notebook principal d'entraînement
+├── clothing-dataset-small-master/ # Dataset externe (non utilisé dans le training final)
+│ ├── test/
+│ ├── train/
+│ └── validation/
+│
+├── dataset/ # Dataset prêt à l'emploi (splits générés)
+│ ├── test/
+│ ├── train/
+│ └── val/
+│
+├── deepfashion/ # Extraction partielle du dataset DeepFashion
+│ ├── annos/ # Annotations brutes
+│ └── image/ # Images récupérées
+│
+├── nok/ # Images NOK (input brut utilisateur)
+├── ok/ # Images OK (input brut utilisateur)
+│
 ├── models/
-│   └── ok_nok_resnet18_fastai.pkl # Modèle exporté
-├── ok_nok_threshold.json          # Seuil optimal sélectionné (0.99)
+│ ├── ok_nok_resnet18_fastai.pkl # Modèle entraîné (export fastai)
+│ └── ok_nok_threshold.json # Seuil optimal déterminé pendant l'évaluation
+│
+├── notebooks/
+│ ├── notebook.ipynb # Notebook principal d’entraînement
+│ └── test_model.ipynb # Notebook de test/inférence
+│
 ├── inference/
-│   └── predict_image.py           # Script d’inférence (optionnel)
+│ └── predict_image.py # Script d’inférence standalone
+│
+├── .gitattributes
 ├── .gitignore
+├── LICENSE # Licence MIT (Ludovic Lafon)
 └── README.md
 
 ```
-
-Les datasets bruts ne sont **pas versionnés** pour garder un dépôt léger.
 
 ---
 
