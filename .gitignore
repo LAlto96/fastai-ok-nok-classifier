@@ -1,9 +1,9 @@
 # === DATASETS (gros fichiers à ne pas versionner) ===
-clothing-dataset-small-master/
-dataset/
-deepfashion/
-nok/
-ok/
+# clothing-dataset-small-master/
+# dataset/
+# deepfashion/
+# nok/
+# ok/
 
 # === JUPYTER ===
 .ipynb_checkpoints/
